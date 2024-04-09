@@ -13,7 +13,9 @@ nama_buku = pickle.load(open('artifacts/nama_buku.pkl','rb'))
 with open('artifacts/final_rating.pkl','rb') as file:
     final_rating=pd.read_pickle(file)
 #final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
-buku_pivot = pickle.load(open('artifacts/buku_pivot.pkl','rb'))
+with open('artifacts/buku_pivot.pkl','rb') as pivot:
+    buku_pivot=pd.read_pickle(pivot)
+#buku_pivot = pickle.load(open('artifacts/buku_pivot.pkl','rb'))
 
 def fetch_poster(suggestion):
     nama_buku = []
