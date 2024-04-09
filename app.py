@@ -9,7 +9,9 @@ st.set_page_config(page_title=PAGE_TITLE,page_icon=PAGE_ICON)
 st.header('Sistem Rekomendasi Buku dengan Machine Learning')
 model = pickle.load(open('artifacts/model.pkl','rb'))
 nama_buku = pickle.load(open('artifacts/nama_buku.pkl','rb'))
-final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
+with open('artifacts/final_rating.pkl','rb') as file:
+    final_rating=pd.read_pickle(file)
+#final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
 buku_pivot = pickle.load(open('artifacts/buku_pivot.pkl','rb'))
 
 def fetch_poster(suggestion):
