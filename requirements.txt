@@ -1,7 +1,7 @@
 streamlit
 numpy
 scikit-learn
-pandas
+pandas==1.5.3
 
 #local packages
 -e .
