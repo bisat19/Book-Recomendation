@@ -2,6 +2,10 @@ import pickle
 import streamlit as st
 import numpy as np
 
+PAGE_TITLE = "Book Recomendation | bisat19"
+PAGE_ICON = "📖"
+st.set_page_config(page_title=PAGE_TITLE,page_icon=PAGE_ICON)
+
 st.header('Sistem Rekomendasi Buku dengan Machine Learning')
 model = pickle.load(open('artifacts/model.pkl','rb'))
 nama_buku = pickle.load(open('artifacts/nama_buku.pkl','rb'))
